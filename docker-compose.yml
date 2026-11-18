@@ -1,0 +1,17 @@
+
+
+# La liste des containers à manager
+services:
+  # Créer un service "web", qui deviendra un container Docker
+  web:
+    # docker run -e NGINX_HOST=demo.fr --name demo-web -p 81:80 -v cle-volume:/usr/share/nginx/html nginx 
+    build: .
+    container_name: exo_jenkinsAGent
+
+    # environment:
+    #   - NGINX_HOST=demo.f
+
+    ports:
+      - 82:80
+
+
