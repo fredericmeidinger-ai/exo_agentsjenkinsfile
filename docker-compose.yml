@@ -12,6 +12,6 @@ services:
     #   - NGINX_HOST=demo.f
 
     ports:
-      - 85:80
+      - 85:8080
 
 
