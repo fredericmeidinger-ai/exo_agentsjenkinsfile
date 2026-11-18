@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    stages {
+
         stage('Maven Package') {
             agent {
                 docker {
@@ -15,6 +17,14 @@ pipeline {
 
             steps {
                     sh 'mvn clean package'
+                
+            }
+        }
+
+        stage('docker command') {
+
+            steps {
+                    sh  'docker compose up -d --build'
                 
             }
         }
