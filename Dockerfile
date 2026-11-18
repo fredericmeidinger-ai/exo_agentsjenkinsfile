@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY target/*.jar jenkinsAgent.jar
 
-EXPOSE 8080
-
 CMD [ "java", "-jar", "jenkinsAgent.jar" ]
 
 
